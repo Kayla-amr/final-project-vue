@@ -7,27 +7,45 @@ import BankTransfer from './components/BankTransfer.vue';
 
 <template>
     <div id="app">
-        <div class="card w-100 bg-base-100 shadow-xl m-2">
-            <div class="card-body flex-col items-center justify-center">
-                <h2 class="card-title">Create Budget List</h2>
-                <outcome-form @add:budget="addBudgets" />
-                <document-budget :budgets="budgets" />
+
+        <div tabindex="0" class="collapse collapse-arrow border border-base-300 bg-base-300 rounded-box">
+            <div class="collapse-title text-xl font-medium">
+                Focus me to see content
+            </div>
+            <div class="collapse-content flex flex-row items-center justify-center bg-base-300">
+                <div class="card w-100 bg-base-100 shadow-xl m-2">
+                    <div class="card-body ">
+                        <h2 class="card-title">Create Budget List</h2>
+                        <outcome-form @add:budget="addBudgets" />
+                        <document-budget :budgets="budgets" />
+                    </div>
+                </div>
             </div>
         </div>
 
-        <div class="card w-100 bg-base-100 shadow-xl m-2">
-            <div class="card-body flex-col items-center">
-                <h2 class="card-title">Calculate Bi-Monthly Income</h2>
-                <split-budget :budgets="budgets" @add:income="addIncomes" :incomes="incomes" />
+        <div tabindex="0" class="collapse collapse-arrow border border-base-300 bg-base-300 rounded-box">
+            <div class="collapse-title text-xl font-medium">
+                Focus me to see content
+            </div>
+            <div class="collapse-content flex flex-row items-center justify-center bg-base-300">
+                <div class="card w-100 bg-base-100 shadow-xl m-2">
+                    <div class="card-body">
+                        <h2 class="card-title">Calculate Income</h2>
+                        <split-budget :budgets="budgets" @add:income="addIncomes" :incomes="incomes" />
+                    </div>
+                </div>
+                <div class="card w-100 bg-base-100 shadow-xl m-2">
+                    <div class="card-body">
+                        <h2 class="card-title">Create Bank Transfer List</h2>
+                        <bank-transfer @add:bank="addBanks" :banks="banks" :budgets="budgets" />
+                    </div>
+                </div>
             </div>
         </div>
 
-        <div class="card w-100 bg-base-100 shadow-xl m-2">
-            <div class="card-body flex-col items-center">
-                <h2 class="card-title">Add Amount</h2>
-                <bank-transfer @add:bank="addBanks" :banks="banks" :budgets="budgets" />
-            </div>
-        </div>
+
+
+
     </div>
 </template>
 
@@ -45,35 +63,49 @@ export default {
             budgets: [
                 {
                     id: 1,
+                    name: "Insurance",
+                    amount: 101.84,
+                    selected: false,
+                    addedToBank: false
+                },
+                {
+                    id: 2,
                     name: "Rent",
                     amount: 687,
                     selected: false,
                     addedToBank: false
                 },
                 {
-                    id: 2,
+                    id: 3,
                     name: "Electric",
                     amount: 5,
                     selected: true,
                     addedToBank: false
                 },
                 {
-                    id: 3,
+                    id: 4,
                     name: "Disney+",
                     amount: 10,
                     selected: false,
                     addedToBank: false
                 },
+                {
+                    id: 5,
+                    name: "Apple Music",
+                    amount: 5.99,
+                    selected: true,
+                    addedToBank: false
+                },
 
                 {
-                    id: 4,
+                    id: 6,
                     name: "Phone",
                     amount: 25,
                     selected: true,
                     addedToBank: false
                 },
                 {
-                    id: 5,
+                    id: 7,
                     name: "Computer",
                     amount: 100,
                     selected: false,
@@ -95,7 +127,7 @@ export default {
                 },
                 {
                     id: 2,
-                    name: "America First",
+                    name: "Wells Fargo",
                     amount: 0,
                 }
             ]
@@ -155,25 +187,21 @@ export default {
 #app {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     background-color: #f5f5f5;
-
 }
-
-th, td, input{
+.collap
+th,
+td,
+input {
     text-align: center;
 }
-input {
-    border-radius: 10px;
-}
 
-td.name, td.amount {
-    padding: 0;
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-td.button{
-    padding: 5px;
-}
-
-
 </style>

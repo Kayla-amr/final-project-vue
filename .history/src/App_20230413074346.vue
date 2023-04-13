@@ -17,7 +17,7 @@ import BankTransfer from './components/BankTransfer.vue';
 
         <div class="card w-100 bg-base-100 shadow-xl m-2">
             <div class="card-body flex-col items-center">
-                <h2 class="card-title">Calculate Bi-Monthly Income</h2>
+                <h2 class="card-title">Calculate BiIncome</h2>
                 <split-budget :budgets="budgets" @add:income="addIncomes" :incomes="incomes" />
             </div>
         </div>
@@ -95,7 +95,7 @@ export default {
                 },
                 {
                     id: 2,
-                    name: "America First",
+                    name: "Wells Fargo",
                     amount: 0,
                 }
             ]

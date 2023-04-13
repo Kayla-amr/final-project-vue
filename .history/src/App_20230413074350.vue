@@ -95,7 +95,7 @@ export default {
                 },
                 {
                     id: 2,
-                    name: "America First",
+                    name: "Wells Fargo",
                     amount: 0,
                 }
             ]

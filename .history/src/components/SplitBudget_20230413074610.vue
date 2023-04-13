@@ -6,7 +6,7 @@
                 <tr>
                     <td>
                         <form @submit.prevent="handleSubmit">
-                            <label  for="amount" class="name">Enter pay:</label>
+                            <label  for="amount">Enter pay:</label>
                             <div  class="calculateBdgt">
                             <input type="text" id="amount" v-model="income.amount" placeholder="$0" class="bg-base-200 p-2"/>
                             <button type="submit" class="btn btn-primary ml-2">Calculate</button>

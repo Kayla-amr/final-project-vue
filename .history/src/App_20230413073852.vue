@@ -16,15 +16,15 @@ import BankTransfer from './components/BankTransfer.vue';
         </div>
 
         <div class="card w-100 bg-base-100 shadow-xl m-2">
-            <div class="card-body flex-col items-center">
-                <h2 class="card-title">Calculate Bi-Monthly Income</h2>
+            <div class="card-body flex-col items-center justify-center">
+                <h2 class="card-title">Calculate Income</h2>
                 <split-budget :budgets="budgets" @add:income="addIncomes" :incomes="incomes" />
             </div>
         </div>
 
         <div class="card w-100 bg-base-100 shadow-xl m-2">
-            <div class="card-body flex-col items-center">
-                <h2 class="card-title">Add Amount</h2>
+            <div class="card-body flex-col items-center justify-center">
+                <h2 class="card-title">Create Bank Transfer List</h2>
                 <bank-transfer @add:bank="addBanks" :banks="banks" :budgets="budgets" />
             </div>
         </div>
@@ -58,7 +58,7 @@ export default {
                     addedToBank: false
                 },
                 {
-                    id: 3,
+                    id: 4,
                     name: "Disney+",
                     amount: 10,
                     selected: false,
@@ -66,14 +66,14 @@ export default {
                 },
 
                 {
-                    id: 4,
+                    id: 6,
                     name: "Phone",
                     amount: 25,
                     selected: true,
                     addedToBank: false
                 },
                 {
-                    id: 5,
+                    id: 7,
                     name: "Computer",
                     amount: 100,
                     selected: false,
@@ -95,7 +95,7 @@ export default {
                 },
                 {
                     id: 2,
-                    name: "America First",
+                    name: "Wells Fargo",
                     amount: 0,
                 }
             ]
@@ -163,9 +163,6 @@ export default {
 
 th, td, input{
     text-align: center;
-}
-input {
-    border-radius: 10px;
 }
 
 td.name, td.amount {

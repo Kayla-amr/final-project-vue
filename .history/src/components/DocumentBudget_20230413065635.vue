@@ -3,9 +3,9 @@
         <table class="table">
             <tbody>
                 <tr class="budgetList" v-for="budget in budgets" :key="budget.id">
-                    <td class="name"> <input type="text" v-model="budget.name" class="bg-base-100 p-2"></td>
-                    <td class="amount"><input type="text" v-model="budget.amount" class="bg-base-100 p-2"></td>
-                    <td class="button"><button class="btn btn-neutral" @click="removeBudget(budget.id)">X</button></td>
+                    <td class="name"> <input type="text" v-model="budget.name" class="bg-base-200 p-2"></td>
+                    <td class="amount"><input type="text" v-model="budget.amount" class="bg-base-200 p-2"></td>
+                    <td><button class="btn btn-neutral" @click="removeBudget(budget.id)">X</button></td>
                 </tr>
             </tbody>
             <tfoot>
@@ -15,9 +15,9 @@
                     <td><p> </p></td>
                 </tr>
                 <tr>
-                    <td><p> </p></td>
+                    <td> </td>
                     <td><button class="btn btn-error my-2" @click="clearAll()">Clear all</button></td>
-                    <td><p> </p></td>
+                    <td> </td>
                 </tr>
             </tfoot>
         </table>
