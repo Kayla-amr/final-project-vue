@@ -1,9 +1,10 @@
 <template>
   <div>
-    <form @submit.prevent="handleSubmit" class="outcomeForm">
-      <table class="table">
-        <tbody>
+    
+      
+        <thead>
           <tr>
+            <form @submit.prevent="handleSubmit" class="outcomeForm">
             <td>
               <input class="name bg-base-200 p-3" type="text" v-model="budgets.name" placeholder="Enter name...">
             </td>
@@ -13,8 +14,7 @@
               <button type="submit" class=" btn btn-primary m-2">+</button>
             </td>
           </tr>
-        </tbody>
-      </table>
+        </thead>
     </form>
   </div>
 </template>

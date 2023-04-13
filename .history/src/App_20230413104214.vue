@@ -22,7 +22,7 @@ import BankTransfer from './components/BankTransfer.vue';
             </div>
         </div>
 
-        <div class="card w-96 bg-base-100 shadow-xl m-2">
+        <div class="card w-100 bg-base-100 shadow-xl m-2">
             <div class="card-body flex-col items-center">
                 <h2 class="card-title">Charge to Bank</h2>
                 <bank-transfer @add:bank="addBanks" :banks="banks" :budgets="budgets" />

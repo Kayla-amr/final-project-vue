@@ -12,6 +12,7 @@ import BankTransfer from './components/BankTransfer.vue';
                 <h2 class="card-title">Create Expense List</h2>
                 <outcome-form @add:budget="addBudgets" />
                 <document-budget :budgets="budgets" />
+            </table>
             </div>
         </div>
 

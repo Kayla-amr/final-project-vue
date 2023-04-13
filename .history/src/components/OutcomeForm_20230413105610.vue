@@ -1,7 +1,7 @@
 <template>
   <div>
     <form @submit.prevent="handleSubmit" class="outcomeForm">
-      <table class="table">
+      
         <tbody>
           <tr>
             <td>

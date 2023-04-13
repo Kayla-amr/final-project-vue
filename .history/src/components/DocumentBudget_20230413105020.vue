@@ -15,7 +15,7 @@
                     <td><button class="btn btn-error my-2" @click="clearAll()">Clear</button></td>
                 </tr>
             </tfoot>
-        </table>
+        
     </div>
 
 </template>

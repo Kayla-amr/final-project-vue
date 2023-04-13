@@ -2,6 +2,12 @@
   <div>
     <form @submit.prevent="handleSubmit" class="outcomeForm">
       <table class="table">
+        <thead>
+          <tr>
+            <th>Expense Name</th>
+            <th>Cost</th>
+          </tr>
+        </thead>
         <tbody>
           <tr>
             <td>

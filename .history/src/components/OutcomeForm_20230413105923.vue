@@ -5,12 +5,10 @@
         <tbody>
           <tr>
             <td>
-              <input class="name bg-base-200 p-3" type="text" v-model="budgets.name" placeholder="Enter name...">
+              <input class="name bg-base-200 p-2" type="text" v-model="budgets.name" placeholder="Enter name...">
             </td>
             <td class="otd">
               <input class="amount bg-base-200 p-2 m-2" type="text" v-model="budgets.amount" placeholder="$0" />
-            
-              <button type="submit" class=" btn btn-primary m-2">+</button>
             </td>
           </tr>
         </tbody>

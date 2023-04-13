@@ -7,7 +7,7 @@ import BankTransfer from './components/BankTransfer.vue';
 
 <template>
     <div id="app">
-        <div class="card w-96 bg-base-100 shadow-xl m-2">
+        <div class="card w-100 bg-base-100 shadow-xl m-2">
             <div class="card-body flex-col items-center justify-center">
                 <h2 class="card-title">Create Expense List</h2>
                 <outcome-form @add:budget="addBudgets" />
@@ -15,14 +15,14 @@ import BankTransfer from './components/BankTransfer.vue';
             </div>
         </div>
 
-        <div class="card w-96 bg-base-100 shadow-xl m-2">
+        <div class="card w-100 bg-base-100 shadow-xl m-2">
             <div class="card-body flex-col items-center">
                 <h2 class="card-title">Calculate End of Month</h2>
                 <split-budget :budgets="budgets" @add:income="addIncomes" :incomes="incomes" />
             </div>
         </div>
 
-        <div class="card w-96 bg-base-100 shadow-xl m-2">
+        <div class="card w-100 bg-base-100 shadow-xl m-2">
             <div class="card-body flex-col items-center">
                 <h2 class="card-title">Charge to Bank</h2>
                 <bank-transfer @add:bank="addBanks" :banks="banks" :budgets="budgets" />
@@ -166,7 +166,7 @@ th, td, input{
 }
 input {
     border-radius: 10px;
-    width: 100%;
+    
 }
 
 td.name, td.amount {

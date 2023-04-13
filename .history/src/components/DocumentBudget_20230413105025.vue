@@ -1,6 +1,5 @@
 <template>
     <div class="document-budget">
-        <table class="table">
             <tbody>
                 <tr class="budgetList" v-for="budget in budgets" :key="budget.id">
                     <td class="name"> <input type="text" v-model="budget.name" class="bg-base-100"></td>
@@ -15,7 +14,6 @@
                     <td><button class="btn btn-error my-2" @click="clearAll()">Clear</button></td>
                 </tr>
             </tfoot>
-        </table>
     </div>
 
 </template>

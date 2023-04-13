@@ -10,8 +10,10 @@ import BankTransfer from './components/BankTransfer.vue';
         <div class="card w-96 bg-base-100 shadow-xl m-2">
             <div class="card-body flex-col items-center justify-center">
                 <h2 class="card-title">Create Expense List</h2>
+                <table>
                 <outcome-form @add:budget="addBudgets" />
                 <document-budget :budgets="budgets" />
+            </table>
             </div>
         </div>
 

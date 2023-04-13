@@ -1,7 +1,7 @@
 <template>
     <div class="document-budget">
         <table class="table">
-            <tbody>
+            <tbody class="py-2">
                 <tr class="budgetList" v-for="budget in budgets" :key="budget.id">
                     <td class="name"> <input type="text" v-model="budget.name" class="bg-base-100"></td>
                     <td class="amount"><input type="text" v-model="budget.amount" class="bg-base-100"></td>
@@ -47,3 +47,9 @@ export default {
     }
 }
 </script>
+
+<style class="scope">
+td {
+    padding: 0;
+}
+</style>

@@ -8,7 +8,7 @@
                 <tr>
                     <td>
                         <form @submit.prevent="handleSubmit">
-                            <div class="calculateBdgt py-2">
+                            <div class="calculateBdgt px-2">
                                 <input type="text" id="amount" v-model="income.amount" placeholder="$0"
                                     class="bg-base-200 p-2" />
                                 <button type="submit" class="btn btn-primary ml-2">Calculate</button>

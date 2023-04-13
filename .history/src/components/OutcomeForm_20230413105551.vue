@@ -1,7 +1,11 @@
 <template>
-  <div>
-    <form @submit.prevent="handleSubmit" class="outcomeForm">
-      <table class="table">
+      <table class="table flex" @submit.prevent="handleSubmit">
+        <thead>
+          <tr>
+            <th>Expense Name</th>
+            <th>Cost</th>
+          </tr>
+        </thead>
         <tbody>
           <tr>
             <td>
@@ -16,7 +20,6 @@
         </tbody>
       </table>
     </form>
-  </div>
 </template>
 
 //Look for string in total and make them numbers

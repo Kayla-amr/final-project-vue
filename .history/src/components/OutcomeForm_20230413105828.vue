@@ -4,14 +4,14 @@
       <table class="table">
         <tbody>
           <tr>
-            <td>
-              <input class="name bg-base-200 p-3" type="text" v-model="budgets.name" placeholder="Enter name...">
-            </td>
-            <td class="otd">
-              <input class="amount bg-base-200 p-2 m-2" type="text" v-model="budgets.amount" placeholder="$0" />
-            
-              <button type="submit" class=" btn btn-primary m-2">+</button>
-            </td>
+            <th>
+              <input class="name bg-base-200" type="text" v-model="budgets.name" placeholder="Enter name...">
+            </th>
+            <th class="otd">
+              <input class="amount bg-base-200" type="text" v-model="budgets.amount" placeholder="$0" />
+            </th>
+            <th>
+              <button class="btn btn-primary" type="submit">+</button>
           </tr>
         </tbody>
       </table>
