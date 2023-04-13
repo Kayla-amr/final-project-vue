@@ -23,7 +23,7 @@
                     <td>{{ bank.name }}</td>
                     <td>{{ bank.amount }}</td>
                     <div class="bankbtn flex">
-                        <td class="button"><ion-icon name="arrow-forward-outline" class="btn btn-primary" type="transfer" @click.once="transferSelectedBudget(bank.id)"></ion-icon></td>
+                        <td class="button"><ion-icon name="arrow-forward-outline" class="btn btn-primary" type="transfer" @click="transferSelectedBudget(bank.id)"></ion-icon></td>
                         <td class="button"> <button class="btn btn-error" type="delete" @click="removeBank(bank.id)">x</button></td>
                     </div>
                 </tr>
