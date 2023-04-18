@@ -37,6 +37,8 @@
 
                 <td>
                     <input type="checkbox" v-model="budget.selected" :disabled="budget.addedToBank === true" />
+                    <button class="btn btn-primary" type="transfer" @click="undoSelectedBudget(budget.id)"
+                     >undo</button>
                 </td>
             </tr>
         </tbody>
@@ -111,7 +113,18 @@ export default {
         },
         remainder(amount) {
             return Math.ceil(amount - this.totalDivided)
-        }
+        },
+        undoSelectedBudget() {
+            this.budgets.forEach(budget => {
+                if (budget.addedToBank) {
+                    const bank = this.banks.find(bank => bank.amount >= Math.ceil(budget.amount / 2));
+                    if (bank) {
+                        bank.amount -= Math.ceil(budget.amount / 2);
+                        budget.addedToBank = false;
+                    }
+                }
+            });
+        },
     }
 }
 </script>

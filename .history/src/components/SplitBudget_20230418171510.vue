@@ -37,6 +37,7 @@
 
                 <td>
                     <input type="checkbox" v-model="budget.selected" :disabled="budget.addedToBank === true" />
+                    <button class="btn btn-primary" type="transfer" >undo</button>
                 </td>
             </tr>
         </tbody>
@@ -112,6 +113,7 @@ export default {
         remainder(amount) {
             return Math.ceil(amount - this.totalDivided)
         }
+        
     }
 }
 </script>

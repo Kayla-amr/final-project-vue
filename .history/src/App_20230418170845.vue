@@ -17,16 +17,14 @@ import BankTransfer from './components/BankTransfer.vue';
 
         <div class="card w-96 bg-base-100 shadow-xl m-2">
             <div class="card-body flex-col items-center">
-                <h2 class="card-title" 
-                style="text-align: center;"
-                >Calculate Divided Expense's <br> with <br> Bi-Weekly Pay</h2>
+                <h2 class="card-title">Calculate Expense with Pay</h2>
                 <split-budget :budgets="budgets" @add:income="addIncomes" :incomes="incomes" />
             </div>
         </div>
 
         <div class="card w-96 bg-base-100 shadow-xl m-2">
             <div class="card-body flex-col items-center">
-                <h2 class="card-title">Add Selected Expense's to Bank</h2>
+                <h2 class="card-title">Add Selected Expenseto Bank</h2>
                 <bank-transfer @add:bank="addBanks" :banks="banks" :budgets="budgets" />
             </div>
         </div>

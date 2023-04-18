@@ -6,7 +6,7 @@
                     <tr>
                         <th>
                             <div class="bankName py-2">
-                            <input class="bg-base-200 p-2" type="text" id="bankName" v-model="bank.name" placeholder="New Bank" />
+                            <input class="bg-base-200 p-2" type="text" id="bankName" v-model="bank.name" placeholder="Add New Bank" />
                             <button class="btn btn-primary ml-2" type="submit">+</button>
                         </div>
                         </th>

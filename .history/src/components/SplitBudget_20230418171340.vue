@@ -37,6 +37,7 @@
 
                 <td>
                     <input type="checkbox" v-model="budget.selected" :disabled="budget.addedToBank === true" />
+                    <bu
                 </td>
             </tr>
         </tbody>

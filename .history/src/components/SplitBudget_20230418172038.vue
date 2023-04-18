@@ -37,6 +37,7 @@
 
                 <td>
                     <input type="checkbox" v-model="budget.selected" :disabled="budget.addedToBank === true" />
+                    <button class="btn btn-primary" type="transfer" >undo</button>
                 </td>
             </tr>
         </tbody>
@@ -111,7 +112,36 @@ export default {
         },
         remainder(amount) {
             return Math.ceil(amount - this.totalDivided)
+        },
+        undoSelectedBudget(budget) {
+        if (budget.addedToBank) {
+            this.$emit("undo:selectedBudget", budget);
         }
+    },
+},
+
+    In the bank-transfer component, listen for the undo:selectedBudget event and bind it to a new method called handleUndoSelectedBudget:
+
+html
+
+<split-budget
+    :budgets="budgets"
+    :incomes="incomes"
+    :banks="banks"
+    @add:income="addIncome"
+    @undo:selectedBudget="handleUndoSelectedBudget"
+></split-budget>
+
+    In the bank-transfer component, create a new method called handleUndoSelectedBudget. This method will receive a budget as an argument, find the bank to which the budget was added, remove the budget amount, and set the addedToBank property of the budget to false:
+
+javascript
+methods: {
+    // ...
+    handleUndoSelectedBudget(budget) {
+        const bank = this.banks.find(
+            (bank) => bank
+
+
     }
 }
 </script>

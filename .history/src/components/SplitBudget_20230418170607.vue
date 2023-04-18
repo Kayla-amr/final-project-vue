@@ -19,7 +19,7 @@
 
 
                 <tr v-for="income in incomes" :key="income.id">
-                    <th><label>Bi-Weekly Pay Entered:</label>
+                    <th><label>Pay:</label>
                         {{ income.amount }}
                         <button class="btn btn-error my-2" type="delete" @click="deleteIncome(income.id)">x</button>
                     </th>
