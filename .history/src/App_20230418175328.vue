@@ -213,7 +213,7 @@ ion-icon.btn.btn-primary.md.hydrated {
 }
 
 .card-body p{
-    flex-grow: unset;
+    flex
 }
 
 

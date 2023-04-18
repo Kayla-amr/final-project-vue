@@ -16,10 +16,8 @@ import BankTransfer from './components/BankTransfer.vue';
         <div class="steps">
         <div class="card w-96 bg-base-100 shadow-xl m-2">
             <div class="card-body flex-col items-center justify-center">
-                <h2 class="card-title">Create</h2>
-                <p> 
-                    Create a list of expenses and edit the amount of each expense.
-                </p>
+                <h2 class="card-title">Create & Edit Expense List</h2>
+                
                 <outcome-form @add:budget="addBudgets" />
                 <document-budget :budgets="budgets" />
             </div>
@@ -27,21 +25,16 @@ import BankTransfer from './components/BankTransfer.vue';
 
         <div class="card w-96 bg-base-100 shadow-xl m-2">
             <div class="card-body flex-col items-center">
-                <h2 class="card-title"
-                >Calculate</h2>
-                <p> 
-                    Calculate the divided expense's with bi-weekly pay.
-                </p>
+                <h2 class="card-title" 
+                style="text-align: center;"
+                >Calculate Divided Expense's <br> with <br> Bi-Weekly Pay</h2>
                 <split-budget :budgets="budgets" @add:income="addIncomes" :incomes="incomes" />
             </div>
         </div>
 
         <div class="card w-96 bg-base-100 shadow-xl m-2">
             <div class="card-body flex-col items-center">
-                <h2 class="card-title">Add</h2>
-                <p> 
-                    Add the selected expense's to your bank.
-                </p>
+                <h2 class="card-title">Add Selected Expense's to Bank</h2>
                 <bank-transfer @add:bank="addBanks" :banks="banks" :budgets="budgets" />
             </div>
         </div>
@@ -210,10 +203,6 @@ table.table{
 ion-icon.btn.btn-primary.md.hydrated {
   font-size: 20px;
   padding: 0 11px;
-}
-
-.card-body p{
-    flex-grow: unset;
 }
 
 

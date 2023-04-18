@@ -212,9 +212,5 @@ ion-icon.btn.btn-primary.md.hydrated {
   padding: 0 11px;
 }
 
-.card-body p{
-    flex-grow: unset;
-}
-
 
 </style>

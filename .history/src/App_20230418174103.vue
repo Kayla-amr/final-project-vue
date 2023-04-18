@@ -7,19 +7,12 @@ import BankTransfer from './components/BankTransfer.vue';
 
 <template>
     <div id="app">
-        <div class="layoutapp">
-            <h1 class="text-5xl font-bold text-center">Budget Tracking</h1>
-            <h2 class="text-2xl font-bold text-center">Create, Edit, and Track Your Budget</h2>
-            <p>
-                A simple budget tracking app that allows you to create a list of expenses, calculate the divided expense's with bi-weekly pay, and add the selected expense's to your bank.
-            </p>
-        <div class="steps">
+        <div>
+
+        <h1>Budget Bi-Weekly Pay</h1>
         <div class="card w-96 bg-base-100 shadow-xl m-2">
             <div class="card-body flex-col items-center justify-center">
-                <h2 class="card-title">Create</h2>
-                <p> 
-                    Create a list of expenses and edit the amount of each expense.
-                </p>
+                <h2 class="card-title">Create & Edit Expense List</h2>
                 <outcome-form @add:budget="addBudgets" />
                 <document-budget :budgets="budgets" />
             </div>
@@ -27,27 +20,19 @@ import BankTransfer from './components/BankTransfer.vue';
 
         <div class="card w-96 bg-base-100 shadow-xl m-2">
             <div class="card-body flex-col items-center">
-                <h2 class="card-title"
-                >Calculate</h2>
-                <p> 
-                    Calculate the divided expense's with bi-weekly pay.
-                </p>
+                <h2 class="card-title" 
+                style="text-align: center;"
+                >Calculate Divided Expense's <br> with <br> Bi-Weekly Pay</h2>
                 <split-budget :budgets="budgets" @add:income="addIncomes" :incomes="incomes" />
             </div>
         </div>
 
         <div class="card w-96 bg-base-100 shadow-xl m-2">
             <div class="card-body flex-col items-center">
-                <h2 class="card-title">Add</h2>
-                <p> 
-                    Add the selected expense's to your bank.
-                </p>
+                <h2 class="card-title">Add Selected Expense's to Bank</h2>
                 <bank-transfer @add:bank="addBanks" :banks="banks" :budgets="budgets" />
             </div>
         </div>
-    </div>
-    </div>
-
     </div>
 </template>
 
@@ -173,15 +158,6 @@ export default {
 
 <style>
 #app {
-    font-family: 'Nunito', sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    color: #2c3e50;
-    background-color: #f5f5f5;
-    padding: 2%;
-}
-.steps {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -210,10 +186,6 @@ table.table{
 ion-icon.btn.btn-primary.md.hydrated {
   font-size: 20px;
   padding: 0 11px;
-}
-
-.card-body p{
-    flex-grow: unset;
 }
 
 
