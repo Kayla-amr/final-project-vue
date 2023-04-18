@@ -7,7 +7,7 @@ import BankTransfer from './components/BankTransfer.vue';
 
 <template>
     <div id="app">
-        <h1>Budget Bi-Weekly Pay</h1>
+        <h1>Budget</h1>
         <div class="card w-96 bg-base-100 shadow-xl m-2">
             <div class="card-body flex-col items-center justify-center">
                 <h2 class="card-title">Create & Edit Expense List</h2>
