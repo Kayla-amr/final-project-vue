@@ -18,7 +18,7 @@ import BankTransfer from './components/BankTransfer.vue';
             <div class="card-body flex-col items-center justify-center">
                 <h2 class="card-title">Create</h2>
                 <p> 
-                    Create a list of expenses, edit the name and amount of each expense.
+                    Create a list of expense, edit the name and amount of each expense.
                 </p>
                 <outcome-form @add:budget="addBudgets" />
                 <document-budget :budgets="budgets" />
