@@ -53,16 +53,16 @@
                 <td>
                     <p> </p>
                 </td>
-                <td class="amount totalDivided">$ {{ totalDivided }}</td>
+                <td class="amount totalDivided">${{ totalDivided }}</td>
             </tr>
-            <tr v-for="(income, index) in incomes" :key="income.id">
+            <tr v-for="income in incomes" :key="income.id">
                 <td for="amount" class="name" >
-                    {{ index === 0 ? 'After Expense:' : 'Possible Balance:' }}
+                    {{ firstEntry ? 'After Expense:' : 'Possible Balance:' }}
                 </td>
                 <td>
                 </td>
-                <td :class="{ green: remainder(income.amount) > 0, red: remainder(income.amount) < 0 }">
-                    $ {{ remainder(income.amount) }}
+                <td>
+                    ${{ remainder(income.amount) }}
                 </td>
             </tr>
         </tfoot>
@@ -97,6 +97,7 @@ export default {
                 name: '',
                 amount: ''
             },
+            firstEntry: true
         }
     },
     methods: {
@@ -106,6 +107,7 @@ export default {
                 name: '',
                 amount: ''
             }
+            this.firstEntry = false
         },
         deleteIncome(id) {
             const index = this.incomes.findIndex(income => income.id === id)
@@ -139,12 +141,5 @@ export default {
 table th{
     padding: 1rem 5px;
 }
-.green {
-        color: green;
-    }
-
-    .red {
-        color: red;
-    }
 </style>
 

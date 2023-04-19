@@ -97,6 +97,7 @@ export default {
                 name: '',
                 amount: ''
             },
+            firstEntry: true
         }
     },
     methods: {
@@ -106,6 +107,7 @@ export default {
                 name: '',
                 amount: ''
             }
+            this.firstEntry = false
         },
         deleteIncome(id) {
             const index = this.incomes.findIndex(income => income.id === id)

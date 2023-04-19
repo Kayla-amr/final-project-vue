@@ -57,7 +57,7 @@
             </tr>
             <tr v-for="(income, index) in incomes" :key="income.id">
                 <td for="amount" class="name" >
-                    {{ index === 0 ? 'After Expense:' : 'Possible Balance:' }}
+                    {{ index ===0 ? 'After Expense:' : 'Possible Balance:' }}
                 </td>
                 <td>
                 </td>
@@ -97,6 +97,7 @@ export default {
                 name: '',
                 amount: ''
             },
+            firstEntry: true
         }
     },
     methods: {
@@ -106,6 +107,7 @@ export default {
                 name: '',
                 amount: ''
             }
+            this.firstEntry = false
         },
         deleteIncome(id) {
             const index = this.incomes.findIndex(income => income.id === id)
