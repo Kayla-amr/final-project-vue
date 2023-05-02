@@ -154,16 +154,20 @@ export default {
             this.incomes = [...this.incomes, newIncomes]
         },
         addBanks(bank) {
-        const addId = this.banks.length > 0 ? this.banks[this.banks.length - 1].id : 0;
-        const id = addId + 1;
+            const addId = this.banks.length > 0 ? this.banks[this.banks.length - 1].id : 0;
+            const id = addId + 1;
 
-        const newBanks = {
-            id,
-            ...bank
-        }
+            const newBanks = {
+                id,
+                ...bank
+            }
 
-        this.banks = [...this.banks, newBanks]
-    },
+
+            const budgetToBank = this.budgets.find(budget => budget.id === bank.id)
+            budgetToBank.addedToBank = true;
+            budgetToBank = b
+            this.banks = [...this.banks, newBanks]
+        },
 
     }
 }

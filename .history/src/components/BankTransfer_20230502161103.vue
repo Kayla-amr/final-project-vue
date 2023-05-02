@@ -107,7 +107,7 @@ export default {
                 budget.addedToBank = true;
             });
         }
-        }
+    },
         ,
         clearTransfer() {
             this.banks.forEach(bank => {
