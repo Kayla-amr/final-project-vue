@@ -3,12 +3,12 @@
     <form @submit.prevent="handleSubmit" class="outcomeForm">
       <table class="table">
         <tbody>
-          <tr class="flex justify-center">
-            <td class="p-1 w-full">
-              <input class="name bg-base-200 p-3 ml-2 justify-center w-full" type="text" v-model="budgets.name" placeholder="Enter name...">
+          <tr>
+            <td class="p-0">
+              <input class="name bg-base-200 p-3 ml-2" type="text" v-model="budgets.name" placeholder="Enter name...">
             </td>
-            <td class="otd p-1 justify-end w-1/2">
-              <input class="amount bg-base-200 p-2 ml-2 w-1/2" type="text" v-model="budgets.amount" placeholder="$0" />
+            <td class="otd">
+              <input class="amount bg-base-200 p-2 ml-2 w-1/3" type="text" v-model="budgets.amount" placeholder="$0" />
             
               <button type="submit" class=" btn btn-primary ml-2">+</button>
             </td>
