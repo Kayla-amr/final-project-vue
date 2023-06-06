@@ -5,7 +5,7 @@
         <tbody>
           <tr class="flex justify-center">
             <td class="p-1 w-full">
-              <input class="name bg-base-200 p-3 mr-2 justify-center w-full" type="text" v-model="budgets.name" placeholder="Enter name...">
+              <input class="name bg-base-200 p-3 ml-2 justify-center w-full" type="text" v-model="budgets.name" placeholder="Enter name...">
             </td>
             <td class="otd p-1 justify-end w-1/2">
               <input class="amount bg-base-200 p-2 mr-2 w-1/2" type="text" v-model="budgets.amount" placeholder="$0" />
